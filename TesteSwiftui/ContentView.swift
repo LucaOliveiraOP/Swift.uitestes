@@ -8,18 +8,10 @@ struct ContentView: View {
                 .font(.title)
                 .padding(.bottom,50)
             
-//            Button(action: {
-//            }) {
-//                Text("Clique aqui para iniciar")
-//                    .font(.headline)
-//                    .padding()
-//                    .background(Color.blue)
-//                    .foregroundColor(.white)
-//                    .cornerRadius(10)
-//            }
-            NavigationLink(destination: TelaContador()) {
+            NavigationLink(destination: LoginView()) {
                 Text("Ir para a próxima tela")
             }.buttonStyle(.borderedProminent)
+                .cornerRadius(50)
         }
     }
     

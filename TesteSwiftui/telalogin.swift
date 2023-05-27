@@ -10,58 +10,76 @@ import SwiftUI
 struct LoginView: View {
     @State private var username: String = ""
     @State private var password: String = ""
+
+    
+    
+    struct usuario {
+        let user: String
+        let password: String
+    }
+
+    
+    
     
     func login() {
         
-        //testecomentario
         
-       print("Username: \(username)")
-       print("Password: \(password)")
-          
+
+ 
             
     }
 
     var body: some View {
-            VStack(spacing: 20) {
-                Image(systemName: "heart.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(.red)
-//                if let url = URL(string: "https://www.imagensempng.com.br/wp-content/uploads/2021/08/Icone-usuario-Png.png"),
-//                       let imageData = try? Data(contentsOf: url),
-//                       let uiImage = UIImage(data: imageData) {
-//                        Image(uiImage: uiImage)
-//                            .resizable()
-//                            .aspectRatio(contentMode: .fit)
-//                            .frame(width: 100, height: 100)
-//                    }
+            VStack(spacing: 10) {
+                Image(systemName: "person.crop.circle.fill")
+                    .font(.system(size: 135))
+                    .font(.largeTitle)
+                    .foregroundColor(.black)
+                    .padding(.bottom,50)
+    
+                  
                 TextField("Nome de usuário", text: $username)
                     .foregroundColor(.black)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
+                    .padding(.bottom,10)
+
                 
                 
                 SecureField("Senha", text: $password)
                     .foregroundColor(.black)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
+                    .padding(.bottom,50)
                 
                 Button(action: {
-                    // Ação executada quando o botão de login é pressionado
-//                    login()
+                    login()
                 }) {
                     Text("Login")
                         .foregroundColor(.white)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.blue)
-                        .cornerRadius(10)
+                        .cornerRadius(50)
+                        .padding(.bottom,30)
                 }
-                .padding(.horizontal)
+                
+                Button(action: {
+                    login()
+                }) {
+                    Text("Registrar")
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .cornerRadius(50)
+                        .padding(.bottom,50)
+                }
+
             }
             .padding()
-            
-            Spacer()
         }
+    
     }
 
 struct telalogin_Previews: PreviewProvider {

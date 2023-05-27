@@ -13,7 +13,6 @@ struct TesteSwiftuiApp: App {
         WindowGroup {
             NavigationStack{
                 ContentView()
-                TelaContador()
             }
         }
     }

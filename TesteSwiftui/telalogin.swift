@@ -36,6 +36,8 @@ struct LoginView: View {
                     .font(.largeTitle)
                     .foregroundColor(.black)
                     .padding(.bottom,50)
+                //asdws
+                    
     
                   
                 TextField("Nome de usuário", text: $username)
